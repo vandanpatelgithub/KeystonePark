@@ -13,6 +13,12 @@
 		07C057812196854800C441E7 /* KeystonePark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C0577F2196854800C441E7 /* KeystonePark.xcdatamodeld */; };
 		07C057832196854A00C441E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C057822196854A00C441E7 /* Assets.xcassets */; };
 		07C057862196854A00C441E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C057842196854A00C441E7 /* LaunchScreen.storyboard */; };
+		07C05791219686F300C441E7 /* Lesson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0578D219686F300C441E7 /* Lesson+CoreDataClass.swift */; };
+		07C05792219686F300C441E7 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0578E219686F300C441E7 /* Lesson+CoreDataProperties.swift */; };
+		07C05793219686F300C441E7 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0578F219686F300C441E7 /* Student+CoreDataClass.swift */; };
+		07C05794219686F300C441E7 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C05790219686F300C441E7 /* Student+CoreDataProperties.swift */; };
+		07C057972196A90200C441E7 /* LessonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C057962196A90200C441E7 /* LessonTableViewController.swift */; };
+		07C0579D21980DDD00C441E7 /* LessonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0579C21980DDD00C441E7 /* LessonService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		07C057822196854A00C441E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C057852196854A00C441E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07C057872196854A00C441E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C0578D219686F300C441E7 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
+		07C0578E219686F300C441E7 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		07C0578F219686F300C441E7 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		07C05790219686F300C441E7 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		07C057962196A90200C441E7 /* LessonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewController.swift; sourceTree = "<group>"; };
+		07C0579C21980DDD00C441E7 /* LessonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,45 @@
 		07C057772196854800C441E7 /* KeystonePark */ = {
 			isa = PBXGroup;
 			children = (
+				07C057952196887200C441E7 /* Data Model */,
 				07C057782196854800C441E7 /* AppDelegate.swift */,
 				07C0577A2196854800C441E7 /* ViewController.swift */,
 				07C0577C2196854800C441E7 /* Main.storyboard */,
 				07C057822196854A00C441E7 /* Assets.xcassets */,
 				07C057842196854A00C441E7 /* LaunchScreen.storyboard */,
 				07C057872196854A00C441E7 /* Info.plist */,
-				07C0577F2196854800C441E7 /* KeystonePark.xcdatamodeld */,
+				07C057982196A90C00C441E7 /* Controller */,
+				07C0579E21980DF300C441E7 /* Service */,
 			);
 			path = KeystonePark;
+			sourceTree = "<group>";
+		};
+		07C057952196887200C441E7 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				07C0577F2196854800C441E7 /* KeystonePark.xcdatamodeld */,
+				07C0578D219686F300C441E7 /* Lesson+CoreDataClass.swift */,
+				07C0578E219686F300C441E7 /* Lesson+CoreDataProperties.swift */,
+				07C0578F219686F300C441E7 /* Student+CoreDataClass.swift */,
+				07C05790219686F300C441E7 /* Student+CoreDataProperties.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		07C057982196A90C00C441E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07C057962196A90200C441E7 /* LessonTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		07C0579E21980DF300C441E7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				07C0579C21980DDD00C441E7 /* LessonService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C0577B2196854800C441E7 /* ViewController.swift in Sources */,
+				07C05793219686F300C441E7 /* Student+CoreDataClass.swift in Sources */,
+				07C05791219686F300C441E7 /* Lesson+CoreDataClass.swift in Sources */,
+				07C0579D21980DDD00C441E7 /* LessonService.swift in Sources */,
+				07C05792219686F300C441E7 /* Lesson+CoreDataProperties.swift in Sources */,
 				07C057792196854800C441E7 /* AppDelegate.swift in Sources */,
+				07C057972196A90200C441E7 /* LessonTableViewController.swift in Sources */,
 				07C057812196854800C441E7 /* KeystonePark.xcdatamodeld in Sources */,
+				07C05794219686F300C441E7 /* Student+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
